@@ -389,6 +389,7 @@ def jsonService():
             response = jsonify({"time_estimated":total+(rate_value/100*2), "rate":rate_value})
         else:
             response = jsonify({"time_estimated":total, "rate":rate_value})
+            
         response.headers.add("Access-Control-Allow-Origin", "*")
         response.headers.add("Access-Control-Allow-Headers", "*")
         response.headers.add("Access-Control-Allow-Methods", "*")
